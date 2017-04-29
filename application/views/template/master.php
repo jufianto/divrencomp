@@ -19,9 +19,13 @@
         
         <!-- Morris Charts CSS -->
         <link href="<?php echo base_url('boot/css/plugins/morris.css')?>" rel="stylesheet">
+         <link href="<?php echo base_url('boot/css/dataTables.min.css')?>" rel="stylesheet">
         
         <!-- Custom Fonts -->
         <link href="<?php echo base_url('boot/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet" type="text/css">
+        
+
+                    
         
         
     </head>
@@ -48,7 +52,7 @@
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="dataservice.php"><i class="fa fa-fw fa-tasks"></i> Data Service</a>
+                        <a href="servis"><i class="fa fa-fw fa-tasks"></i> Data Service</a>
                     </li>
                     <li>
                         <a href="datasparepart.php"><i class="fa fa-fw fa-wrench"></i> Data Sparepart</a>
@@ -61,7 +65,7 @@
                     <ul class="nav navbar-right top-nav">
                         <li>
                             
-                            <a href="<?php echo base_url('master/logout'); ?>"><i class="fa fa-fw fa-power-off"></i> Log Out &nbsp;&nbsp; </a>
+                            <a href="<?php echo base_url('auth/logout'); ?>"><i class="fa fa-fw fa-power-off"></i> Log Out &nbsp;&nbsp; </a>
                         </li>
                     </ul>
                     
@@ -96,13 +100,22 @@
                     <!-- jQuery -->
                     <script src="<?php echo base_url('boot/js/jquery.js')?>"></script>
                     
-                    <!-- Bootstrap Core JavaScript -->
+                     <!-- Bootstrap Core JavaScript -->
                     <script src="<?php echo base_url('boot/js/bootstrap.min.js')?>"></script>
+                    
+
+                   
+
+
+                    
+                
                     
                     <!-- Morris Charts JavaScript -->
                     <script src="<?php echo base_url('boot/js/plugins/morris/raphael.min.js')?>"></script>
                     <script src="<?php echo base_url('boot/js/plugins/morris/morris.min.js')?>"></script>
                     <script src="<?php echo base_url('boot/js/plugins/morris/morris-data.js')?>"></script>
+                    
+                    
                     
                     </body>
                     
