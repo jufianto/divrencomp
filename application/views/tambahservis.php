@@ -22,39 +22,66 @@
     <!-- /.row -->
     
     <div class="row">
-        <div class="col-md-6">
-            
-            <form role="form" action="prosestambah" method="post">
+        <form role="form" action="prosestambah" method="post">
+            <div class="col-md-6">
                 
+                
+                
+            
                 <div class="form-group">
                     <label>Nama</label>
-                    <input class="form-control" required placeholder="Nama" name="Nama">
+                    <input class="form-control" required placeholder="Nama" name="nama">
                 </div>
                 <div class="form-group">
                     <label>No HP</label>
                     <input class="form-control" required placeholder="No Hp" name="nohp">
                 </div>
+                
                 <div class="form-group">
-                    <label>Katergori Barang</label>
-                    <input class="form-control" required placeholder="Kategori Barang" name="kategori">
+                    <label >Kategori</label>
+                    <select class="form-control" name="kategori">
+                        <?php 
+                        foreach ($kategori as $kat){
+                            ?>
+                        <option value="<?= $kat->id ?>"><?= $kat->kategori ?></option>
+                        <?php
+                        }
+                        ?>
+                        
+                        
+                    </select>
                 </div>
-                 <div class="form-group">
+                
+                <div class="form-group">
                     <label>Tipe Barang</label>
                     <input class="form-control" required placeholder="Tipe Barang" name="tipe">
                 </div>
                 <div class="form-group">
                     <label>Kelengkapan</label>
-                    <input class="form-control" required placeholder="Kelengkapan" name="kontak">
+                    <input class="form-control" required placeholder="Kelengkapan" name="kelengkapan">
                 </div>
                 </br>
+                    
+                    
+                    
+                    
+            </div>
+        
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Masalah</label>
+                    <textarea name="kerusakan" class="form-control" rows="5" id="comment"></textarea>
+                </div>
                 
                 <div class="form-group">
                     <Button class="btn btn-primary btn-xl page-scroll">Simpan</button>
                     
                 </div>
-            </form>
-            
-        </div>
+                
+            </div>
+                
+        
+         </form>
         
     </div>
     <!-- /.row -->

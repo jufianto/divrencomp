@@ -49,10 +49,10 @@
             <ul class="nav navbar-right top-nav collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="servis"><i class="fa fa-fw fa-tasks"></i> Data Service</a>
+                        <a href="<?php echo base_url('servis'); ?>"><i class="fa fa-fw fa-tasks"></i> Data Service</a>
                     </li>
                     <li>
                         <a href="datasparepart.php"><i class="fa fa-fw fa-wrench"></i> Data Sparepart</a>
@@ -77,14 +77,22 @@
                     <div id="page-wrapper">
                         
                         <!--flash data-->
-            <?php if($this->session->flashdata('message')){ ?>
-                        <br>
-                        <div class="container">
-                            <div class="alert alert-<?php echo $this->session->flashdata('class'); ?>">
-                                <strong><?php echo $this->session->flashdata('message'); ?></strong> <?php echo $this->session->flashdata('value'); ?>
+                        <div class="row">
+                            
+                       <?php if($this->session->flashdata('message')){ ?>
+                            <br>
+                            <div class="container">
+                                <div class="alert alert-<?php echo $this->session->flashdata('class'); ?>">
+                                    <strong><?php echo $this->session->flashdata('message'); ?></strong> <?php echo $this->session->flashdata('value'); ?>
+                                </div>
                             </div>
+                    <?php } ?>
+                        
+                      
+                            
+                            
                         </div>
-            <?php } ?>            
+          
                         
                         <!--end flash data-->
                         
@@ -92,6 +100,15 @@
                         <!-- /.container-fluid -->
                         
                     </div>
+        
+        
+        <script>
+            window.setTimeout(function() {
+                $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                    $(this).remove();
+                });
+            }, 2000);
+        </script>
                     <!-- /#page-wrapper -->
                     
                     
@@ -106,10 +123,6 @@
 
                    
 
-
-                    
-                
-                    
                     <!-- Morris Charts JavaScript -->
                     <script src="<?php echo base_url('boot/js/plugins/morris/raphael.min.js')?>"></script>
                     <script src="<?php echo base_url('boot/js/plugins/morris/morris.min.js')?>"></script>

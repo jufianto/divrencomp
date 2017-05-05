@@ -29,18 +29,17 @@
     <div class="row">
             <div class="col-lg-12">
                 
-                <?php echo date('ymdz'); ?>
             
             <div class="table-responsive">
                 <table id="cunek" class="table table-bordered table-hover">
                         <thead>
                         
                         <tr>
-                            <th>No Nota</th>
+                            <th width="80">No Nota</th>
                             <th width="180" style="text-align:center">tanggal order</th>
                             <th>Nama</th>
-                            <th width="200">kontak</th>
-                            <th width="200">Status</th>
+                            <th width="100">kontak</th>
+                            <th width="150">Status</th>
                             <th width="300" colspan="2">Aksi</th>
                         </tr>
                     </thead>
@@ -48,13 +47,23 @@
                         <?php 
                         $no =1;
                         
+                        if(count($record) == 0)
+                        {?>
+                            <tr>
+                                <td colspan="6" style="text-align:center"> Tidak Ada Hasil </td>
+                            </tr>    
+                            
+                        <?php    
+                        }else{
+                            
+                        
                         foreach($record as $r){
                             ?>
                         <tr>
                             <td><?php echo $r->no_nota; ?></td>
                             <td align="center"><?php echo $r->tgl_order; ?></td>
                             <td><?php echo $r->nama_pelanggan; ?></td>
-                            <td><?php echo $r->kontak; ?></td>
+                            <td style="text-align:center"><?php echo $r->kontak; ?></td>
                             <?php 
                             if ($r->status == 0){
                                 $st = "Sedang Dicek";
@@ -66,18 +75,20 @@
                             }elseif($r->status ==3){
                                 $st = "ready";
                             } ?>
-                            <td><?php echo $st ?></td>
-                            <td width="300">
+                            <td style="text-align:center"><?php echo $st ?></td>
+                            <td width="320">
                                 <a href="tambahdetailservice.php" > <span class="glyphicon glyphicon-plus	" aria-hidden="true"></span> Update </a>
                                 <a href="editdataservice.php" > <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit &nbsp;</a>
                                 <a href="#" > <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Print</a>
                                 <a href="#" > <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete </a>
+                                <a href="#" > <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Detail </a>
+
                                     
                                     
                             </td>
                                 
                         </tr>
-                        <?php } ?>
+                        <?php }} ?>
                             
                     </tbody>
                 </table>
