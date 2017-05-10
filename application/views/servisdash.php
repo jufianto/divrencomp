@@ -77,11 +77,10 @@
                             } ?>
                             <td style="text-align:center"><?php echo $st ?></td>
                             <td width="320">
-                                <a href="tambahdetailservice.php" > <span class="glyphicon glyphicon-plus	" aria-hidden="true"></span> Update </a>
-                                <a href="editdataservice.php" > <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit &nbsp;</a>
+                                <a href="<?= base_url('servis/editServis/' . $r->no_nota) ?>" > <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit &nbsp;</a>
                                 <a href="#" > <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Print</a>
-                                <a href="#" > <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete </a>
-                                <a href="#" > <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Detail </a>
+                                <a href="<?= base_url('servis/deleteServis/' . $r->no_nota) ?>" > <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete </a>
+                                <a href="<?= base_url('servis/detail/' . $r->no_nota) ?>" > <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Detail </a>
 
                                     
                                     

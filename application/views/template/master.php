@@ -26,7 +26,11 @@
         
 
                     
-        
+        <style>
+            .container-fluid{
+                min-height:600px;
+            }
+        </style>
         
     </head>
     

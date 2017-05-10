@@ -8,10 +8,10 @@
             </h1>
             <ol class="breadcrumb">
                 <li>
-                    <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
+                    <i class="fa fa-dashboard"></i>  <a href="<?= base_url('dashboard')?>">Dashboard</a>
                 </li>
                 <li class="active">
-                    <i class="fa fa-edit"></i> <a href="pelanggan.php">Data Service</a>
+                    <i class="fa fa-edit"></i> <a href="<?= base_url('servis')?>">Data Service</a>
                 </li>
                 <li class="active">
                     <i class="fa fa-edit"></i> Tambah Data Service
@@ -51,6 +51,8 @@
                         
                     </select>
                 </div>
+                
+                
                 
                 <div class="form-group">
                     <label>Tipe Barang</label>
