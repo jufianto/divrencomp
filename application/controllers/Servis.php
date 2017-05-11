@@ -29,7 +29,6 @@ class servis extends CI_Controller{
     }else{
       $tempid = $this->checkid();
       $no_nota = date('ymd') . $tempid;
-      print_r($no_nota);
       $dataServis = array (
         'no_nota' => $no_nota ,
         'nama_pelanggan' => $this->input->post('nama'),
