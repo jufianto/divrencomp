@@ -21,7 +21,6 @@
                 </div>
                 <button type="submit" class="btn">Masuk</button>
                 <br>
-                <a href="lupapassword.php"> &nbsp Lupa Password</a>
             </form>
     </div>
 </div>
