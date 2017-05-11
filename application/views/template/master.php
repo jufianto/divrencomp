@@ -59,7 +59,7 @@
                         <a href="<?php echo base_url('servis'); ?>"><i class="fa fa-fw fa-tasks"></i> Data Service</a>
                     </li>
                     <li>
-                        <a href="datasparepart.php"><i class="fa fa-fw fa-wrench"></i> Data Sparepart</a>
+                        <a href="<?php echo base_url('sparepart'); ?>"><i class="fa fa-fw fa-wrench"></i> Data Sparepart</a>
                     </li>
                     <li>
                         <a href="laporan.php"><i class="fa fa-fw fa-edit"></i> Laporan</a>

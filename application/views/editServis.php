@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    
+
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
@@ -20,17 +20,17 @@
         </div>
     </div>
     <!-- /.row -->
-    
+
     <div class="row">
-        <form role="form" action="<?= base_url('servis/prosesedit') ?>" method="post">
+        <form role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="col-md-6">
-                
-                
+
+
                 <div class="form-group">
                     <label>No Nota</label>
                     <input class="form-control" required value="<?= $record->no_nota ?>" name="no_nota" readonly="">
                 </div>
-                
+
                 <div class="form-group">
                     <label>Nama</label>
                     <input class="form-control" required value="<?= $record->nama_pelanggan ?>" name="nama">
@@ -39,51 +39,51 @@
                     <label>No HP</label>
                     <input class="form-control" required value="<?= $record->kontak ?>" name="nohp">
                 </div>
-                
+
                 <div class="form-group">
                     <label >Kategori</label>
                     <select class="form-control" name="kategori">
-                        <?php 
+                        <?php
                         foreach ($kategori as $kat){
                             ?>
                         <option value="<?= $kat->id ?>" <?= $kat->id == $record->kategori ? "selected" : ""; ?>><?= $kat->kategori ?></option>
                         <?php
                         }
                         ?>
-                        
-                        
+
+
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <label>Tipe Barang</label>
                     <input class="form-control" required value="<?= $record->tipe ?>" name="tipe">
                 </div>
 
                 </br>
-                
-                
-                
-                
+
+
+
+
             </div>
-            
-            
+
+
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Kelengkapan</label>
                     <input class="form-control" required value="<?= $record->kelengkapan ?>" name="kelengkapan">
                 </div>
-                
+
                 <div class="form-group">
                     <label >Status</label>
-                    <select class="form-control" name="Status">
-                        <?php 
+                    <select class="form-control" name="status">
+                        <?php
                         $statusList = array(
                             '0' => 'Sedang Dicek',
                             '1' => 'Belum Konfirmasi',
                             '2' => 'Sedang Dikerjakan',
                             '3' => 'Ready'
-                            
+
                         );
                         foreach ($statusList as $id => $val){
                             ?>
@@ -91,11 +91,11 @@
                         <?php
                         }
                         ?>
-                        
-                        
+
+
                     </select>
-                </div> 
-                
+                </div>
+
                 <div class="form-group">
                     <label>Masalah</label>
                     <textarea name="kerusakan" class="form-control" rows="5" id="comment"><?= $record->kerusakan ?></textarea>
@@ -104,19 +104,19 @@
                     <label>Harga</label>
                     <input class="form-control" required value="<?= $record->harga ?>" name="harga">
                 </div>
-                
+
                 <div class="form-group">
                     <Button class="btn btn-primary btn-xl page-scroll">Simpan</button>
-                    
+
                 </div>
-                
+
             </div>
-            
-            
+
+
         </form>
-        
+
     </div>
     <!-- /.row -->
-    
+
 </div>
 <!-- /.container-fluid -->

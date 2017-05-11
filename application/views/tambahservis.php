@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    
+
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
@@ -20,14 +20,14 @@
         </div>
     </div>
     <!-- /.row -->
-    
+
     <div class="row">
-        <form role="form" action="prosestambah" method="post">
+        <form role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="col-md-6">
-                
-                
-                
-            
+
+
+
+
                 <div class="form-group">
                     <label>Nama</label>
                     <input class="form-control" required placeholder="Nama" name="nama">
@@ -36,24 +36,24 @@
                     <label>No HP</label>
                     <input class="form-control" required placeholder="No Hp" name="nohp">
                 </div>
-                
+
                 <div class="form-group">
                     <label >Kategori</label>
                     <select class="form-control" name="kategori">
-                        <?php 
+                        <?php
                         foreach ($kategori as $kat){
                             ?>
                         <option value="<?= $kat->id ?>"><?= $kat->kategori ?></option>
                         <?php
                         }
                         ?>
-                        
-                        
+
+
                     </select>
                 </div>
-                
-                
-                
+
+
+
                 <div class="form-group">
                     <label>Tipe Barang</label>
                     <input class="form-control" required placeholder="Tipe Barang" name="tipe">
@@ -63,30 +63,30 @@
                     <input class="form-control" required placeholder="Kelengkapan" name="kelengkapan">
                 </div>
                 </br>
-                    
-                    
-                    
-                    
+
+
+
+
             </div>
-        
+
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Masalah</label>
                     <textarea name="kerusakan" class="form-control" rows="5" id="comment"></textarea>
                 </div>
-                
+
                 <div class="form-group">
                     <Button class="btn btn-primary btn-xl page-scroll">Simpan</button>
-                    
+
                 </div>
-                
+
             </div>
-                
-        
+
+
          </form>
-        
+
     </div>
     <!-- /.row -->
-    
+
 </div>
 <!-- /.container-fluid -->

@@ -45,6 +45,10 @@
                         <td><?= $rc->tipe ?></td>
                     </tr>
                     <tr>
+                        <td>Tanggal Servis</td>
+                        <td><?= $rc->tgl_order ?></td>
+                    </tr>
+                    <tr>
                         <td>Kategori Barang</td>
                         <td>
                             <?php
