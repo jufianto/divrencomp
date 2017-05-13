@@ -76,6 +76,8 @@
                     $st = "Sedang di Kerjakan";
                   }elseif($r->status ==3){
                     $st = "ready";
+                  }elseif($r->status == 4){
+                    $st = "Batal";
                   } ?>
                   <td style="text-align:center"><?php echo $st ?></td>
                   <td width="320">

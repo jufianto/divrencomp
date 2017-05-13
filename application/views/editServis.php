@@ -82,8 +82,8 @@
                             '0' => 'Sedang Dicek',
                             '1' => 'Belum Konfirmasi',
                             '2' => 'Sedang Dikerjakan',
-                            '3' => 'Ready'
-
+                            '3' => 'Ready',
+                            '4' => 'Batal'
                         );
                         foreach ($statusList as $id => $val){
                             ?>

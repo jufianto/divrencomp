@@ -9,10 +9,10 @@
       </h1>
       <ol class="breadcrumb">
         <li>
-          <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
+          <i class="fa fa-dashboard"></i>  <a href="<?= base_url('dashboard')?>">Dashboard</a>
         </li>
         <li class="active">
-          <i class="fa fa-edit"></i> <a href="pelanggan.php">Data Sparepart</a>
+          <i class="fa fa-edit"></i> <a href="<?= base_url('sparepart')?>">Data Sparepart</a>
         </li>
         <li class="active">
           <i class="fa fa-edit"></i> Tambah Data Sparepart
