@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url('sparepart') ?>">
+                <a href="<?= base_url('servis') ?>">
                     <div class="panel-footer">
                         <span class="pull-left">Lihat detail</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -63,7 +63,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-lg-4 col-md-12">
+<!--         <div class="col-lg-4 col-md-12">
             <div class="panel panel-yellow">
                 <div class="panel-heading">
                     <div class="row">
@@ -84,7 +84,7 @@
                     </div>
                 </a>
             </div>
-        </div>
+        </div> -->
 
     </div>
     <!-- /.row -->

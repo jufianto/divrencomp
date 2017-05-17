@@ -51,110 +51,129 @@
 
   <header>
     <div class="header-content">
-      <div class="header-content-inner">
-        <h1 id="homeHeading">Website Layanan Service Divren Komputer</h1>
-        <hr>
-        <p>Masukkan Nota Service anda dibawah ini</p>
-        <form class="form-inline">
-          Masukkan Nota
-          <input type="text" class="form-control" size="50" placeholder="Nomor Nota Service">
-          <a type="button" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Submit</a>
 
-        </form>
-      </div>
-    </div>
-
-  </header>
-
-  <div class="container">
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Detail Service</h4>
-          </div>
-          <div class="modal-body">
-            <p>(form detail service)</p>
-          </div>
-          <div class="modal-footer">
-            <button  type="button" class="btn " ><a href="HalamanUtama_iya.php">Konfirmasi</a></button>
-            <button  type="button" class="btn " ><a href="HalamanUtama_tidak.php">Tidak</a></button>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <section id="services">
-    <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Melayani</h2>
-          <hr class="primary">
+
+        <?php if($this->session->flashdata('message')){ ?>
+          <br>
+          <div class="container">
+            <div class="alert alert-<?php echo $this->session->flashdata('class'); ?>">
+              <strong><?php echo $this->session->flashdata('message'); ?></strong> <?php echo $this->session->flashdata('value'); ?>
+            </div>
+          </div>
+          <?php } ?>
+
+
+
+
+        </div>
+
+        <div class="header-content-inner">
+          <h1 id="homeHeading">Website Layanan Service Divren Komputer</h1>
+          <hr>
+          <p>Masukkan Nota Service anda dibawah ini</p>
+          <form class="form-inline">
+            Masukkan Nota
+            <input type="text" id="idnota" class="form-control" size="50" placeholder="Nomor Nota Service">
+            <a type="button" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal" id="submit">Submit</a>
+
+          </form>
+        </div>
+      </div>
+
+    </header>
+
+    <div class="container">
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Detail Service</h4>
+            </div>
+            <div class="modal-body" id="detailnota">
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 text-center">
-          <div class="service-box">
-            <i class="fa fa-4x fa-wrench text-primary sr-icons"></i>
-            <h3>Service</h3>
-            <p class="text-muted">Kami melayani Service Hardware dan Software</p>
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Melayani</h2>
+            <hr class="primary">
           </div>
         </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-wrench text-primary sr-icons"></i>
+              <h3>Service</h3>
+              <p class="text-muted">Kami melayani Service Hardware dan Software</p>
+            </div>
+          </div>
 
-        <div class="col-lg-6 col-md-12 text-center">
-          <div class="service-box">
-            <i class="fa fa-4x fa-laptop text-primary sr-icons"></i>
-            <h3>Pembelian</h3>
-            <p class="text-muted">Kami melayani pembelian software dan hardware ditempat</p>
+          <div class="col-lg-6 col-md-12 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-laptop text-primary sr-icons"></i>
+              <h3>Pembelian</h3>
+              <p class="text-muted">Kami melayani pembelian software dan hardware ditempat</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="bg-primary" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2 class="section-heading">Let's Get In Touch!</h2>
-          <hr class="primary">
-          <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-        </div>
-        <div class="col-lg-4 col-lg-offset-2 text-center">
-          <i class="fa fa-phone fa-3x sr-contact"></i>
-          <p>0821 6936 3212</p>
-        </div>
-        <div class="col-lg-4 text-center">
-          <i class="fa fa-home fa-3x sr-contact"></i>
-          <p>Jl. Bangau Sakti No. 10</p>
+    <section class="bg-primary" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="primary">
+            <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+          </div>
+          <div class="col-lg-4 col-lg-offset-2 text-center">
+            <i class="fa fa-phone fa-3x sr-contact"></i>
+            <p>0821 6936 3212</p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <i class="fa fa-home fa-3x sr-contact"></i>
+            <p>Jl. Bangau Sakti No. 10</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
 
-  <!-- jQuery -->
-  <script src="<?php echo base_url('toob/vendor/jquery/jquery.min.js') ?>"></script>
+    <!-- jQuery -->
+    <script src="<?php echo base_url('toob/vendor/jquery/jquery.min.js') ?>"></script>
 
-  <!-- Bootstrap Core JavaScript -->
-  <script src="<?php echo base_url('toob/vendor/bootstrap/js/bootstrap.min.js') ?>"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="<?php echo base_url('toob/vendor/bootstrap/js/bootstrap.min.js') ?>"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="<?php echo base_url('toob/vendor/scrollreveal/scrollreveal.min.js') ?>"></script>
-  <script src="<?php echo base_url('toob/vendor/magnific-popup/jquery.magnific-popup.min.js') ?>"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url('toob/vendor/scrollreveal/scrollreveal.min.js') ?>"></script>
+    <script src="<?php echo base_url('toob/vendor/magnific-popup/jquery.magnific-popup.min.js') ?>"></script>
 
-  <!-- Theme JavaScript -->
-  <script src="<?php echo base_url('toob/js/creative.min.js') ?>"></script>
+    <!-- Theme JavaScript -->
+    <script src="<?php echo base_url('toob/js/creative.min.js') ?>"></script>
+    <script>
+    $("a#submit").click(function() {
+      $.get("<?php echo base_url('reqajax/detail/'); ?>"+$("#idnota").val(),{},function(res){
+        $("#detailnota").html(res);
+      });
+    });
+    </script>
 
-</body>
+  </body>
 
-</html>
+  </html>

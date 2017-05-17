@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    
+
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
@@ -20,14 +20,14 @@
         </div>
     </div>
     <!-- /.row -->
-        
+
     <div class="row">
-        
+
         <div class="col-md-8 col-md-offset-2">
-            
+
             <div class="table-responsive">
                 <table class="table table-bordered table-hover">
-                    
+
                     <tr>
                         <td>No Nota</td>
                         <td><?= $rc->no_nota ?></td>
@@ -71,7 +71,7 @@
                     <tr>
                         <td>Status</td>
                         <td>
-                            <?php 
+                            <?php
                             if ($rc->status == 0){
                                 $st = "Sedang Dicek";
                             } elseif($rc->status ==1){
@@ -81,7 +81,13 @@
                                 $st = "Sedang di Kerjakan";
                             }elseif($rc->status ==3){
                                 $st = "ready";
-                            } ?>
+                            }elseif($rc->status == 4){
+                              $st ="Batal";
+                            }
+
+                            echo $st;
+
+                             ?>
                         </td>
                     </tr>
                     <tr>
@@ -98,17 +104,17 @@
                             <a href="<?= base_url('servis/editServis/' . $rc->no_nota) ?>" > <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit &nbsp;</a>
                             <a href="#" > <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Print</a>
                             <a href="<?= base_url('servis/deleteServis/' . $rc->no_nota) ?>" > <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete </a>
-                           
+
                         </td>
                     </tr>
-                        
-                    
+
+
                 </table>
-                    
+
             </div>
-                
-                
-                
-                
+
+
+
+
         </div>
     </div>
