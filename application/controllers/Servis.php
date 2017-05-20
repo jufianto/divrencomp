@@ -2,6 +2,7 @@
 
 class servis extends CI_Controller{
 
+
   function __construct()
   {
     parent::__construct();
@@ -140,10 +141,7 @@ class servis extends CI_Controller{
     $data['rc'] = $this->Servis_model->detail($id)->row();
     $this->load->view('print',$data);
   }
-
-
-
-
-
-
 }
+
+
+
