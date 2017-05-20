@@ -32,7 +32,7 @@ class servis extends CI_Controller{
       $dataServis = array (
         'no_nota' => $no_nota ,
         'nama_pelanggan' => $this->input->post('nama'),
-        'kategori' => $this->input->post('kategori'),
+        'id_kategori' => $this->input->post('kategori'),
         'tipe' => $this->input->post('tipe'),
         'kelengkapan' => $this->input->post('kelengkapan'),
         'kontak' => $this->input->post('nohp')
@@ -67,6 +67,7 @@ class servis extends CI_Controller{
   function deleteServis($no_nota){
     $no_nota = $this->uri->segment(3);
     $this->Servis_model->deleteServis($no_nota);
+    $this->Servis_model->deleteDetail($no_nota);
     $this->session->set_flashdata(array('class'=>'success','alert'=>'Berhasil','message'=>'Data telah dihapus'));
     redirect(base_url('servis'));
 
@@ -93,7 +94,7 @@ class servis extends CI_Controller{
       $dataServis = array (
 
         'nama_pelanggan' => $this->input->post('nama'),
-        'kategori' => $this->input->post('kategori'),
+        'id_kategori' => $this->input->post('kategori'),
         'tipe' => $this->input->post('tipe'),
         'kelengkapan' => $this->input->post('kelengkapan'),
         'kontak' => $this->input->post('nohp'),
@@ -124,8 +125,20 @@ class servis extends CI_Controller{
   function detail(){
     $id = $this->uri->segment(3);
     $data['kategori']   = $this->Servis_model->getKategori();
-    $data['rc'] = $this->Servis_model->detail($id);
+    $data['rc'] = $this->Servis_model->detail($id)->row();
     $this->template->load('template/master','detail',$data);
+  }
+
+  function batal(){
+
+    $data['record'] = $this->Servis_model->getBatal();
+    $this->template->load('template/master','servisdash',$data);
+
+  }
+
+  function print($id){
+    $data['rc'] = $this->Servis_model->detail($id)->row();
+    $this->load->view('print',$data);
   }
 
 

@@ -12,10 +12,10 @@
           <i class="fa fa-dashboard"></i>  <a href="<?= base_url('dashboard')?>">Dashboard</a>
         </li>
         <li class="active">
-          <i class="fa fa-edit"></i> <a href="<?= base_url('sparepart')?>">Data Sparepart</a>
+          <i class="fa fa-edit"></i> <a href="<?= base_url('auth/profil')?>">Profil</a>
         </li>
         <li class="active">
-          <i class="fa fa-edit"></i> Tambah Data Sparepart
+          <i class="fa fa-edit"></i> Edit Password
         </li>
       </ol>
     </div>
@@ -30,16 +30,23 @@
 
 
         <div class="form-group">
-          <label>Nama Barang</label>
-          <input class="form-control" value="<?= $record->nama_sparepart ?>"  required name="nama">
+          <label>Username</label>
+          <input class="form-control" value="<?= $record->username ?>" readonly="true" required name="username">
         </div>
         <div class="form-group">
-          <label>Harga</label>
-          <input onkeypress='validate(event)' class="form-control" value="<?= $record->harga_sparepart ?>" required name="harga">
+          <label>Password Lama</label>
+          <input class="form-control" type="password" placeholder="Password Lama" required name="oldpass">
+        </div>
+        <div class="form-group">
+        <label>Password Baru</label>
+          <input  class="form-control" type="password" placeholder="Password Baru" required name="newpass1">
+        </div>
+         <div class="form-group">
+        <label>Konfirmasi Password Baru</label>
+          <input  class="form-control" type="password" placeholder="Konfirmasi Password Baru" required name="newpass2">
         </div>
 
-      </br>
-    </br>
+
 
     <div class="form-group">
       <Button class="btn btn-primary btn-xl page-scroll">Simpan</button>
@@ -50,15 +57,3 @@
   </div>
 
 </div>
-<script>
-    function validate(evt) {
-  var theEvent = evt || window.event;
-  var key = theEvent.keyCode || theEvent.which;
-  key = String.fromCharCode( key );
-  var regex = /[0-9]|\./;
-  if( !regex.test(key) ) {
-    theEvent.returnValue = false;
-    if(theEvent.preventDefault) theEvent.preventDefault();
-  }
-}
-</script>

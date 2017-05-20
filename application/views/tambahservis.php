@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label>No HP</label>
-                    <input class="form-control" required placeholder="No Hp" name="nohp">
+                    <input onkeypress='validate(event)' class="form-control" maxlength="12" required placeholder="No Hp" name="nohp">
                 </div>
 
                 <div class="form-group">
@@ -43,7 +43,7 @@
                         <?php
                         foreach ($kategori as $kat){
                             ?>
-                        <option value="<?= $kat->id ?>"><?= $kat->kategori ?></option>
+                        <option value="<?= $kat->id_kategori ?>"><?= $kat->kategori ?></option>
                         <?php
                         }
                         ?>
@@ -89,4 +89,17 @@
     <!-- /.row -->
 
 </div>
+
+<script>
+    function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+</script>
 <!-- /.container-fluid -->

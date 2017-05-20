@@ -19,7 +19,7 @@
         <td>
           <?php
           foreach ($kategori as $kat){
-            if($kat->id == $rc->kategori ){
+            if($kat->id_kategori == $rc->id_kategori ){
               echo $kat->kategori;
             }
           }

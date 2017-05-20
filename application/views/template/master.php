@@ -64,6 +64,9 @@
                     <li <?php if($this->uri->segment(1)== 'laporan') echo 'class="active"'; ?>>
                         <a href="<?= base_url('laporan')?>"><i class="fa fa-fw fa-edit"></i> Laporan</a>
                     </li>
+                    <li <?php if($this->uri->segment(1)== 'profil') echo 'class="active"'; ?>>
+                        <a href="<?= base_url('auth/profil')?>"><i class="fa fa-fw fa-user"></i> Profil</a>
+                    </li>
                     </div>
                     <!-- Top Menu Items -->
                     <ul class="nav navbar-right top-nav">

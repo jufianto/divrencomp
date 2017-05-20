@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label>No HP</label>
-                    <input class="form-control" required value="<?= $record->kontak ?>" name="nohp">
+                    <input class="form-control" onkeypress='validate(event)' maxlength="12" required value="<?= $record->kontak ?>" name="nohp">
                 </div>
 
                 <div class="form-group">
@@ -46,7 +46,7 @@
                         <?php
                         foreach ($kategori as $kat){
                             ?>
-                        <option value="<?= $kat->id ?>" <?= $kat->id == $record->kategori ? "selected" : ""; ?>><?= $kat->kategori ?></option>
+                        <option value="<?= $kat->id_kategori ?>" <?= $kat->id_kategori == $record->id_kategori ? "selected" : ""; ?>><?= $kat->kategori ?></option>
                         <?php
                         }
                         ?>
@@ -120,3 +120,15 @@
 
 </div>
 <!-- /.container-fluid -->
+<script>
+    function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+</script>

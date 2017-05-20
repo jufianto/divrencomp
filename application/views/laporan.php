@@ -40,34 +40,29 @@
                 <th>Laporan</th>
                 <th>Total</th>
               </tr>
-              <tr>
-                <td><a href="pelanggan.php">Pelanggan</a></td>
-                <td></td>
-
-
-              </tr>
+              
               <tr>
                 <td><a href="dataservice.php">Total Service Diterima</a></td>
                 <td><?= $terima ?></td>
               </tr>
               <tr>
-                <td><a href="dataservice.php"> Total Service Dibatalkan </a></td>
+                <td><a href="<?= base_url('servis/batal') ?>"> Total Service Dibatalkan </a></td>
                 <td><?= $batal ?></td>
 
               </tr>
               <tr>
-                <td><a href="datasparepart.php"> Total Sparepart Dibeli </a></td>
+                <td><a href="<?= base_url('Sparepart') ?>"> Total Sparepart Dibeli </a></td>
                 <td> <?= $spare ?></td>
 
               </tr>
               <tr>
                 <td>Pemasukan </td>
-                <td></td>
+                <td><?= harga($pemasukan->harga);?></td>
 
               </tr>
               <tr>
                 <td> Pengeluaran </td>
-                <td></td>
+                <td><?= harga($pengeluaran->harga);?></td>
 
               </tr>
 

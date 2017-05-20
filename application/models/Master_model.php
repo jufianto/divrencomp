@@ -12,6 +12,18 @@ class Master_model extends CI_Model
        return 0;
    }
   }
+
+  function getUser($username){
+  	return $this->db->get_where('user',array('username' => $username))->row();
+  }
+
+  function updatePass($id,$password){
+
+  	$this->db->set('password', $password);
+    $this->db->where('username',$id);
+    $this->db->update('user');
+
+  }
   
   
 }

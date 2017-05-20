@@ -36,9 +36,8 @@
 
 <body id="page-top">
 
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<!--   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
@@ -46,8 +45,7 @@
         <a class="navbar-brand page-scroll" href="#page-top">Divren Komputer</a>
       </div>
     </div>
-    <!-- /.container-fluid -->
-  </nav>
+  </nav> -->
 
   <header>
     <div class="header-content">
@@ -135,9 +133,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <h2 class="section-heading">Ayo Tunggu Apa Lagi </h2>
             <hr class="primary">
-            <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            <p>anda bisa menghubungi kami ataupun datang langsung ketoko kami dengan no telpon dan alamat dibawah ini!</p>
           </div>
           <div class="col-lg-4 col-lg-offset-2 text-center">
             <i class="fa fa-phone fa-3x sr-contact"></i>
@@ -145,7 +143,7 @@
           </div>
           <div class="col-lg-4 text-center">
             <i class="fa fa-home fa-3x sr-contact"></i>
-            <p>Jl. Bangau Sakti No. 10</p>
+            <p>Jl.Bangau Sakti (Samping Unri) , Panam - Pekanbaru</p>
           </div>
         </div>
       </div>

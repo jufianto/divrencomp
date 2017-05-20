@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
           <label>Harga</label>
-          <input class="form-control" placeholder="Harga" required name="harga">
+          <input onkeypress='validate(event)' class="form-control" placeholder="Harga" required name="harga">
         </div>
 
       </br>
@@ -50,3 +50,15 @@
   </div>
 
 </div>
+<script>
+    function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+</script>

@@ -46,14 +46,14 @@
                     </tr>
                     <tr>
                         <td>Tanggal Servis</td>
-                        <td><?= $rc->tgl_order ?></td>
+                        <td><?= tanggal($rc->tgl_order) ?></td>
                     </tr>
                     <tr>
                         <td>Kategori Barang</td>
                         <td>
                             <?php
                             foreach ($kategori as $kat){
-                                if($kat->id == $rc->kategori ){
+                                if($kat->id_kategori == $rc->id_kategori ){
                                     echo $kat->kategori;
                                 }
                             }
@@ -96,7 +96,7 @@
                     </tr>
                     <tr>
                         <td>Harga</td>
-                        <td><?= $rc->harga ?></td>
+                        <td><?= harga($rc->harga) ?></td>
                     </tr>
                     <tr>
                         <td>Action</td>

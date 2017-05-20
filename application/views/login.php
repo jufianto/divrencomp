@@ -20,6 +20,13 @@
                     <input type="password" name="password" placeholder="Password..." required class="form-password form-control" id="form-password">
                 </div>
                 <button type="submit" class="btn">Masuk</button>
+                <br><br>
+                <a href="<?= base_url('/') ?>"> <input type="button" class="btn btn-danger pull-right" value="Kembali ke halaman utama"></a>
+
+                 
+
+
+
                 <br>
             </form>
     </div>
