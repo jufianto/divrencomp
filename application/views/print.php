@@ -41,7 +41,7 @@ table{
 <body>
   <table style="text-align: center">
   <tr>
-    <th colspan="12">Divren Komputer</th>
+    <th colspan="12">Exe Komputer</th>
   </tr>
   <tr>
     <td colspan="12" style="text-align: center"><h3> <?=$rc->no_nota ?> </h3></td>

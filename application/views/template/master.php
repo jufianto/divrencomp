@@ -48,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Divren Komputer</a>
+                <a class="navbar-brand" href="index.php">Exe Komputer</a>
             </div>
             <ul class="nav navbar-right top-nav collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">

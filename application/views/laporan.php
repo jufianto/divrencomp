@@ -28,7 +28,7 @@
 
       <div class="panel panel-primary">
         <div class="panel-heading">
-          Laporan Divren Komputer
+          Laporan Exe Komputer
         </div>
 
         <div class="panel-body">

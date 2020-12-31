@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Divren Computer Service Center	</title>
+  <title>Exe Computer Service Center	</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="<?php echo base_url('toob/vendor/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
@@ -42,7 +42,7 @@
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand page-scroll" href="#page-top">Divren Komputer</a>
+        <a class="navbar-brand page-scroll" href="#page-top">Exe Komputer</a>
       </div>
     </div>
   </nav> -->
@@ -67,7 +67,7 @@
         </div>
 
         <div class="header-content-inner">
-          <h1 id="homeHeading">Website Layanan Service Divren Komputer</h1>
+          <h1 id="homeHeading">Website Layanan Service Exe Komputer</h1>
           <hr>
           <p>Masukkan Nota Service anda dibawah ini</p>
           <form class="form-inline">
@@ -139,11 +139,11 @@
           </div>
           <div class="col-lg-4 col-lg-offset-2 text-center">
             <i class="fa fa-phone fa-3x sr-contact"></i>
-            <p>0821 6936 3212</p>
+            <p>0821 xxxx xxxx</p>
           </div>
           <div class="col-lg-4 text-center">
             <i class="fa fa-home fa-3x sr-contact"></i>
-            <p>Jl.Bangau Sakti (Samping Unri) , Panam - Pekanbaru</p>
+            <p>Jl.Localhost No. 1337</p>
           </div>
         </div>
       </div>
